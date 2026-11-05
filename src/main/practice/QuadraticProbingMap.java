@@ -58,7 +58,7 @@ public class QuadraticProbingMap<K, V> implements Map<K, V> {
     return size;
   }
 
-  // Turns a key into its home slot: hash, then compress to the array's range.
+  // Turns a key into the index of its home slot: hash, then compress to the array's range.
   private int indexFor(K key) {
     return Math.floorMod(key.hashCode(), slots.length);
   }
@@ -143,7 +143,7 @@ public class QuadraticProbingMap<K, V> implements Map<K, V> {
     return new Entries();
   }
 
-  // Walks the slots array, returning the key of each live entry and skipping
+  // Traverses the slots array, returning the key of each live entry and skipping
   // empty slots and tombstones.
   private class KeyIterator implements Iterator<K> {
     private int slot = 0;  // the next slot to examine
@@ -183,7 +183,7 @@ public class QuadraticProbingMap<K, V> implements Map<K, V> {
     }
   }
 
-  // Walks the slots array, returning each live entry and skipping empty slots
+  // Traverses the slots array, returning each live entry and skipping empty slots
   // and tombstones.
   private class EntryIterator implements Iterator<Map.Entry<K, V>> {
     private int slot = 0;  // the next slot to examine
