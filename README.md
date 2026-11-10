@@ -1,6 +1,6 @@
 # Open Addressing — Practice
 
-Two practice problems: an open-addressed map that probes quadratically in every operation, and counting the subarrays of an array that sum to a target with a map of prefix sums. Each problem has a JUnit suite.
+One practice problem: counting the subarrays of an array that sum to a target with a map of prefix sums. The problem has a JUnit suite.
 
 ## Prerequisites
 
@@ -21,13 +21,9 @@ code/
         Map.java                        # the Map ADT
         HashMap.java                    # the chapter's open-addressed HashMap
       practice/
-        QuadraticProbingMap.java        # one quadratic probe rule in every operation
         SubarraySum.java                # count the subarrays that sum to k
     test/
-      map/
-        MapTest.java                    # the Map contract suite
       practice/
-        QuadraticProbingMapTest.java
         SubarraySumTest.java            # the scenarios, written once
         SubarraySumBruteForceTest.java  # runs them against subarraySumBruteForce
         SubarraySumMapTest.java         # runs them against subarraySum
@@ -40,12 +36,10 @@ code/
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh practice.SubarraySumBruteForceTest` — compiles everything and runs only that test class.
 
-There is no demo program for these problems; the tests are how you check your work.
+There is no demo program for this problem; the tests are how you check your work.
 
 ## What's here
 
-- `practice.QuadraticProbingMap<K, V>` — the chapter's `HashMap` with quadratic probing in `put`, `get`, `containsKey`, `remove`, and `rehash`.
 - `practice.SubarraySum` — `subarraySumBruteForce`, which tries every subarray, and `subarraySum`, which makes one pass with a map from each prefix sum to how many times it has occurred.
-- `map.Map<K, V>`, `map.HashMap<K, V>`, and `map.MapTest` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySum` uses the `HashMap`.
-- `practice.QuadraticProbingMapTest` — runs the Map contract suite against `QuadraticProbingMap`, then reads the slots through reflection to check the quadratic probe.
+- `map.Map<K, V>` and `map.HashMap<K, V>` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySum` uses the `HashMap`.
 - `practice.SubarraySumTest` — the scenarios for both solutions, with one subclass per solution.
