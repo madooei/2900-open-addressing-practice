@@ -3,27 +3,11 @@ package practice;
 import map.HashMap;
 import map.Map;
 
-/** Solutions to the subarray sum equals k problem. */
-public final class SubarraySum {
+/** Practice problem: count the subarrays that sum to k with a map of prefix sums. */
+public final class SubarraySumMap {
 
-  private SubarraySum() {
+  private SubarraySumMap() {
     // This class should not be instantiated!
-  }
-
-  // Returns how many subarrays of nums sum to exactly k. Subarrays that start
-  // or end at different positions count separately. Assumes nums is not null.
-  public static int subarraySumBruteForce(int[] nums, int k) {
-    int answer = 0;
-    for (int start = 0; start < nums.length; start++) {
-      int sum = 0;
-      for (int end = start; end < nums.length; end++) {
-        sum += nums[end];
-        if (sum == k) {
-          answer++;  // the subarray from start through end sums to k
-        }
-      }
-    }
-    return answer;
   }
 
   // Returns how many subarrays of nums sum to exactly k. Subarrays that start

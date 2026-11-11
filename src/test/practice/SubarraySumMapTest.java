@@ -5,6 +5,6 @@ public class SubarraySumMapTest extends SubarraySumTest {
 
   @Override
   protected int subarraySum(int[] nums, int k) {
-    return SubarraySum.subarraySum(nums, k);
+    return SubarraySumMap.subarraySum(nums, k);
   }
 }
