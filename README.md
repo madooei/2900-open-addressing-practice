@@ -21,12 +21,13 @@ code/
         Map.java                        # the Map ADT
         HashMap.java                    # the chapter's open-addressed HashMap
       practice/
-        SubarraySum.java                # count the subarrays that sum to k
+        SubarraySumBruteForce.java      # try every subarray
+        SubarraySumMap.java             # one pass with a map of prefix sums
     test/
       practice/
         SubarraySumTest.java            # the scenarios, written once
-        SubarraySumBruteForceTest.java  # runs them against subarraySumBruteForce
-        SubarraySumMapTest.java         # runs them against subarraySum
+        SubarraySumBruteForceTest.java  # runs them against SubarraySumBruteForce
+        SubarraySumMapTest.java         # runs them against SubarraySumMap
   scripts/
     test.sh                             # compile and run the JUnit tests
 ```
@@ -40,6 +41,7 @@ There is no demo program for this problem; the tests are how you check your work
 
 ## What's here
 
-- `practice.SubarraySum` — `subarraySumBruteForce`, which tries every subarray, and `subarraySum`, which makes one pass with a map from each prefix sum to how many times it has occurred.
-- `map.Map<K, V>` and `map.HashMap<K, V>` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySum` uses the `HashMap`.
+- `practice.SubarraySumBruteForce` — `subarraySum`, which tries every subarray.
+- `practice.SubarraySumMap` — `subarraySum`, which makes one pass with a map from each prefix sum to how many times it has occurred.
+- `map.Map<K, V>` and `map.HashMap<K, V>` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySumMap` uses the `HashMap`.
 - `practice.SubarraySumTest` — the scenarios for both solutions, with one subclass per solution.

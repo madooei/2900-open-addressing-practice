@@ -5,6 +5,6 @@ public class SubarraySumBruteForceTest extends SubarraySumTest {
 
   @Override
   protected int subarraySum(int[] nums, int k) {
-    return SubarraySum.subarraySumBruteForce(nums, k);
+    return SubarraySumBruteForce.subarraySum(nums, k);
   }
 }
