@@ -1,6 +1,6 @@
 # Open Addressing — Practice
 
-One practice problem: counting the subarrays of an array that sum to a target with a map of prefix sums. The problem has a JUnit suite.
+One practice problem: count the subarrays of an array that sum to a target. It has three solutions, the last one with a map of prefix sums, and a JUnit suite that runs against one solution at a time or all of them.
 
 ## Prerequisites
 
@@ -22,11 +22,13 @@ code/
         HashMap.java                    # the chapter's open-addressed HashMap
       practice/
         SubarraySumBruteForce.java      # try every subarray
+        SubarraySumPrefixSums.java      # count pairs of prefix sums
         SubarraySumMap.java             # one pass with a map of prefix sums
     test/
       practice/
         SubarraySumTest.java            # the scenarios, written once
         SubarraySumBruteForceTest.java  # runs them against SubarraySumBruteForce
+        SubarraySumPrefixSumsTest.java  # runs them against SubarraySumPrefixSums
         SubarraySumMapTest.java         # runs them against SubarraySumMap
   scripts/
     test.sh                             # compile and run the JUnit tests
@@ -42,6 +44,7 @@ There is no demo program for this problem; the tests are how you check your work
 ## What's here
 
 - `practice.SubarraySumBruteForce` — `subarraySum`, which tries every subarray.
+- `practice.SubarraySumPrefixSums` — `subarraySum`, which counts the pairs of prefix sums that differ by the target.
 - `practice.SubarraySumMap` — `subarraySum`, which makes one pass with a map from each prefix sum to how many times it has occurred.
 - `map.Map<K, V>` and `map.HashMap<K, V>` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySumMap` uses the `HashMap`.
-- `practice.SubarraySumTest` — the scenarios for both solutions, with one subclass per solution.
+- `practice.SubarraySumTest` — the scenarios for all three solutions, with one subclass per solution.
