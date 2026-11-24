@@ -45,7 +45,7 @@ code/
 - `scripts/test.sh practice.SubarraySumBruteForceTest` — compiles everything and runs only that test class.
 - `scripts/run.sh demo.SubarraySumMapDemo` — compiles everything and runs that one demo. Every solution class has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `practice.SubarraySumBruteForce` — `subarraySum`, which tries every subarray.
 - `practice.SubarraySumPrefixSums` — `subarraySum`, which counts the pairs of prefix sums that differ by the target.
