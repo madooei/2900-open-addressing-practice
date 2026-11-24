@@ -24,6 +24,10 @@ code/
         SubarraySumBruteForce.java      # try every subarray
         SubarraySumPrefixSums.java      # count pairs of prefix sums
         SubarraySumMap.java             # one pass with a map of prefix sums
+      demo/                             # one demo per solution class
+        SubarraySumBruteForceDemo.java
+        SubarraySumPrefixSumsDemo.java
+        SubarraySumMapDemo.java
     test/
       practice/
         SubarraySumTest.java            # the scenarios, written once
@@ -32,14 +36,14 @@ code/
         SubarraySumMapTest.java         # runs them against SubarraySumMap
   scripts/
     test.sh                             # compile and run the JUnit tests
+    run.sh                              # compile and run one demo
 ```
 
 ## How to compile and run
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh practice.SubarraySumBruteForceTest` — compiles everything and runs only that test class.
-
-There is no demo program for this problem; the tests are how you check your work.
+- `scripts/run.sh demo.SubarraySumMapDemo` — compiles everything and runs that one demo. Every solution class has its own demo, `<Class>Demo`.
 
 ## What's here
 
@@ -48,3 +52,4 @@ There is no demo program for this problem; the tests are how you check your work
 - `practice.SubarraySumMap` — `subarraySum`, which makes one pass with a map from each prefix sum to how many times it has occurred.
 - `map.Map<K, V>` and `map.HashMap<K, V>` — copied unchanged from the chapter so this code compiles and runs on its own. `SubarraySumMap` uses the `HashMap`.
 - `practice.SubarraySumTest` — the scenarios for all three solutions, with one subclass per solution.
+- `demo.SubarraySumBruteForceDemo`, `demo.SubarraySumPrefixSumsDemo`, and `demo.SubarraySumMapDemo` — one demo per solution class, each on an example the notes trace.
