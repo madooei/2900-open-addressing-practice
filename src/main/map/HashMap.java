@@ -170,9 +170,9 @@ public class HashMap<K, V> implements Map<K, V> {
     Entry<K, V>[] old = slots;
     slots = (Entry<K, V>[]) new Entry[capacity];
     used = 0;
-    for (Entry<K, V> e : old) {
-      if (e != null && !e.deleted) {  // skip empty slots and tombstones
-        slots[probe(e.key)] = e;      // the first empty slot on e's path
+    for (Entry<K, V> entry : old) {
+      if (entry != null && !entry.deleted) {  // skip empty slots and tombstones
+        slots[probe(entry.key)] = entry;  // the first empty slot on entry's path
         used++;
       }
     }
